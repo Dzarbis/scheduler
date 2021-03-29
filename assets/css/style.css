@@ -71,7 +71,5 @@ textarea{
 }
 
 .span-mod {
-  background-color: white;
-  border-top: dotted;
-  border-bottom: dotted;
+  width: 90px;
 }
