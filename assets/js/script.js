@@ -144,3 +144,5 @@ var loader = function() {
 // function calls
 classSet();
 loader();
+
+setInterval(classSet, 1800000);
