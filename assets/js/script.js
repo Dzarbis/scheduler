@@ -1,5 +1,5 @@
 // set variables
-var currentTime = moment().format("dddd, MM/DD/YYYY - hh:mm:ss A");
+var currentTime = moment().format("hA");
 var hour1 = moment(currentTime, "L").set("hour", 9).format("hA");
 var hour2 = moment(currentTime, "L").set("hour", 10).format("hA");
 var hour3 = moment(currentTime, "L").set("hour", 11).format("hA");
@@ -20,3 +20,108 @@ $(".2pm").text(hour6);
 $(".3pm").text(hour7);
 $(".4pm").text(hour8);
 $(".5pm").text(hour9);
+
+// set classes
+var classSet = function() {
+    // 9am
+    if (currentTime > hour1) {
+        $("#input9").addClass("past");
+    }
+    else if (currentTime === hour1) {
+        $("#input9").addClass("present");
+    }
+    else if (currentTime > hour1) {
+        $("#input9").addClass("future");
+    };
+    
+    // 10am
+    if (currentTime > hour2) {
+        $("#input10").addClass("past");
+    }
+    else if (currentTime === hour2) {
+        $("#input10").addClass("present");
+    }
+    else if (currentTime > hour2) {
+        $("#input10").addClass("future");
+    };
+
+    // 11am
+    if (currentTime > hour3) {
+        $("#input11").addClass("past");
+    }
+    else if (currentTime === hour3) {
+        $("#input11").addClass("present");
+    }
+    else if (currentTime > hour3) {
+        $("#input11").addClass("future");
+    };
+
+    // 12pm
+    if (currentTime > hour4) {
+        $("#input12").addClass("past");
+    }
+    else if (currentTime === hour4) {
+        $("#input12").addClass("present");
+    }
+    else if (currentTime > hour4) {
+        $("#input12").addClass("future");
+    };
+
+    // 1pm
+    if (currentTime > hour5) {
+        $("#input1").addClass("past");
+    }
+    else if (currentTime === hour5) {
+        $("#input1").addClass("present");
+    }
+    else if (currentTime > hour5) {
+        $("#input1").addClass("future");
+    };
+
+    // 2pm
+    if (currentTime > hour6) {
+        $("#input2").addClass("past");
+    }
+    else if (currentTime === hour6) {
+        $("#input2").addClass("present");
+    }
+    else if (currentTime > hour6) {
+        $("#input2").addClass("future");
+    };
+
+    // 3pm
+    if (currentTime > hour7) {
+        $("#input3").addClass("past");
+    }
+    else if (currentTime === hour7) {
+        $("#input3").addClass("present");
+    }
+    else if (currentTime > hour7) {
+        $("#input3").addClass("future");
+    };
+
+    // 4pm
+    if (currentTime > hour8) {
+        $("#input4").addClass("past");
+    }
+    else if (currentTime === hour8) {
+        $("#input4").addClass("present");
+    }
+    else if (currentTime > hour8) {
+        $("#input4").addClass("future");
+    };
+
+    // 5pm
+    if (currentTime > hour9) {
+        $("#input5").addClass("past");
+    }
+    else if (currentTime === hour9) {
+        $("#input5").addClass("present");
+    }
+    else if (currentTime > hour9) {
+        $("#input5").addClass("future");
+    };
+}
+
+
+classSet();
