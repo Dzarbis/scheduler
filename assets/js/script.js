@@ -123,5 +123,24 @@ var classSet = function() {
     };
 }
 
+// task saver
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var contents = $(this).siblings(".form-control").val();
+    var location = $(this).parent().data("time");
 
+    localStorage.setItem(location, contents);
+})
+
+// loader
+var loader = function() {
+    var hours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+    for (var i = 0; i < hours.length; i++) {
+        var load = localStorage.getItem(hours[i]);
+        $("#input" + hours[i]).val(load);
+    }
+}
+
+// function calls
 classSet();
+loader();
